@@ -8,7 +8,7 @@
 Project ini bertujuan membandingkan proses ETL dan ELT menggunakan dataset Ride Booking NCR India dan Weather Data NCR India 2024. Data hasil proses diunggah dan disimpan pada database cloud Supabase PostgreSQL untuk keperluan analisis lanjutan.
 
 ## Tools
-- **Bahazsa Pemrograman**: Python
+- **Bahasa Pemrograman**: Python
 - **Database Cloud**: Supabase (PostgreSQL)
 - **Visualisasi Data**: Tableau Desktop
 - **Jaringan**: Cloudflare WARP (hanya dibutuhkan jika menggunakan WiFi Kampus/jaringan yang memblokir port database)
@@ -48,13 +48,13 @@ Dashboard menampilkan visualisasi dari database:
 > - **Koneksi WiFi Kampus**: Anda **wajib mengaktifkan Cloudflare WARP** (atau VPN) terlebih dahulu sebelum menjalankan notebook atau membuka Tableau agar koneksi ke database tidak terblokir oleh firewall kampus.
 
 ### 1. Proses ETL
-1. Buka notebook [ETL.ipynb](file:///c:/Users/MSI/Documents/Code/Big%20Data/UAS%20BigData/ETL.ipynb).
+1. Buka notebook [ETL.ipynb](ETL.ipynb).
 2. Pada **Cell 11** (Langkah 5), sesuaikan konfigurasi koneksi database Supabase Anda (Host, User, Password, Port: 5432, DB Name: postgres).
 3. Jalankan seluruh sel di notebook.
 4. Hasil pembersihan lokal akan disimpan di folder `cleaned_data/` dan data hasil gabungan (*merged*) diunggah ke tabel `ride_bookings_weather_merged` di Supabase.
 
 ### 2. Proses ELT
-1. Buka notebook [ELT.ipynb](file:///c:/Users/MSI/Documents/Code/Big%20Data/UAS%20BigData/ELT.ipynb).
+1. Buka notebook [ELT.ipynb](ELT.ipynb).
 2. Pada **Cell 3**, sesuaikan koneksi string SQLAlchemy (`PG_CONN`) menggunakan URI Supabase Anda (pastikan menyertakan parameter `?sslmode=require`).
 3. Jalankan seluruh sel di notebook secara berurutan.
 4. Data mentah akan diunggah ke database, dibersihkan, dan diproses langsung di server Supabase menjadi tabel fakta `fact_ride_weather`.
