@@ -16,7 +16,6 @@ Untuk menghubungkan Tableau ke database atau ketika Tableau meminta kata sandi d
 | **Username** | `postgres` |
 | **Password** | `uas_bigdata2026` |
 | **Authentication** | Username and Password |
-| **SSL Mode** | Require SSL (Wajib dicentang) |
 
 ---
 
@@ -67,8 +66,7 @@ Pilih dan buka salah satu file dashboard sesuai proses data yang ingin Anda liha
 1. Saat file dibuka, Tableau akan mendeteksi koneksi PostgreSQL dan meminta kata sandi.
 2. Masukkan password database: **`uas_bigdata2026`**.
 3. Pastikan kolom Host terisi: **`db.okculcsrmwiactymkqzq.supabase.co`** dan Username: **`postgres`**.
-4. Centang pilihan **Require SSL** (Wajib agar Supabase mengizinkan koneksi).
-5. Klik **Sign In** / **Masuk**.
+4. Klik **Sign In** / **Masuk**.
 
 ### Langkah 3: Verifikasi Sumber Data (Data Source)
 - Jika Tableau meminta lokasi tabel atau jika data tidak muncul otomatis, pastikan skema yang dipilih adalah **`public`**.
